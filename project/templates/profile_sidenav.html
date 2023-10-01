@@ -1,0 +1,44 @@
+{% load static %}
+<link rel="stylesheet" href="{% static 'css/profile_sidenav.css' %}">
+
+<div class="dashboard-tape">
+    <p>Dashboard</p>/
+    <p><a href="{% url 'profile_home' %}"><i class="fa fa-home" aria-hidden="true" style="color: rgb(195, 195, 195);;"></i></a></p>/
+    <p>
+        {% if request.path == '/account/profile_home/' %}Profile Home{% endif %}
+        {% if request.path == '/account/profile_edit/' %}Edit Account{% endif %}
+        {% if request.path == '/account/profile_ads/' %}My Ads{% endif %}
+        {% if request.path == '/account/profile_orders/' %}My Orders{% endif %}
+        {% if request.path == '/animal/animal_requasts/' %}My Requests{% endif %}
+        {% if request.path == '/account/profile_reviews/' %}Reviews{% endif %}
+        {% if request.path == '/chat/chat_rooms/' %}Chat Rooms{% endif %}
+        {% if request.path == '/account/profile_fav_cats/' %}Favorite Cats{% endif %}
+        {% if request.path == '/account/profile_account_url/' %}Share Account URL{% endif %}
+        {% if request.path == '/account/profile_wallet/' %}My Wallet{% endif %}
+        {% if request.path == '/account/profile_my_settings/' %}Settings{% endif %}
+    </p>
+    
+
+</div>
+
+<div class="sidenav">
+
+    <a class="sidebar-header">
+        <i class="sidebar-title">
+            Navigation
+        </i>
+    </a>
+
+    <a href="{% url 'profile_home' %}" class="{% if request.path == '/account/profile_home/' %}active{% endif %}" > <i class="fa fa-home" aria-hidden="true"></i> Profile Home</a>
+    <a href="{% url 'profile_edit' %}" class="{% if request.path == '/account/profile_edit/' %}active{% endif %}" > <i class="fa fa-pencil-square-o" aria-hidden="true"></i> Edit Account Information</a>
+    <a href="{% url 'profile_ads' %}" class="{% if request.path == '/account/profile_ads/' %}active{% endif %}" > <i class="fa fa-bullhorn" aria-hidden="true"></i> My Ads</a>
+    <a href="{% url 'profile_orders' %}" class="{% if request.path == '/account/profile_orders/' %}active{% endif %}" > <i class="fa fa-shopping-cart" aria-hidden="true"></i> My Orders</a>
+    <a href="{% url 'animal_requasts' %}" class="{% if request.path == '/animal/animal_requasts/' %}active{% endif %}" > <i class="fa fa-random" aria-hidden="true"></i> My Requests</a>
+    <a href="{% url 'profile_reviews' %}" class="{% if request.path == '/account/profile_reviews/' %}active{% endif %}"> <i class="fa fa-star" aria-hidden="true"></i> Reviews</a>
+    <a href="{% url 'chat_rooms' %}" class="{% if request.path == '/chat/chat_rooms/' %}active{% endif %}"> <i class="fa fa-commenting-o" aria-hidden="true"></i> Chat Rooms</a>
+    <a href="{% url 'profile_fav_cats' %}" class="{% if request.path == '/account/profile_fav_cats/' %}active{% endif %}"> <i class="fa fa-heart" aria-hidden="true"></i> Favorite Cats</a>
+    <a href="{% url 'profile_account_url' %}" class="{% if request.path == '/account/profile_account_url/' %}active{% endif %}"> <i class="fa fa-share" aria-hidden="true"></i> Share Account URL</a>
+    <a href="{% url 'profile_wallet' %}" class="{% if request.path == '/account/profile_wallet/' %}active{% endif %}"> <i class="fa fa-google-wallet" aria-hidden="true"></i> My Wallet</a>
+    <a href="{% url 'profile_my_settings' %}" class="{% if request.path == '/account/profile_my_settings/' %}active{% endif %}"> <i class="fa fa-cog" aria-hidden="true"></i> Settings</a>
+    <a href="{% url 'add_animal' %}" class="add-cat-btn"> <i class="fa fa-plus-circle" aria-hidden="true"></i> Add Cat</a>
+</div>

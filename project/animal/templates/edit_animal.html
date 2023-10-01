@@ -1,0 +1,144 @@
+{% extends 'base.html' %}
+{% load static %}
+{% load i18n %}
+<!-- SPECIFIC CSS -->
+{% block content %}
+  <link rel="stylesheet" href="{% static 'css/edit_animal.css' %}" />
+  {% include 'profile_sidenav.html' %}
+
+  <div class="main-container">
+    <div class="edit-animal-container">
+      <div class="edit-animal-container-col">
+        <section class="edit-animal-container-panel">
+          <header class="edit-animal-container-panel-header">
+            <h2>Cat Info</h2>
+          </header>
+          <form class="edit-animal-container-panel-body-form" id="add_animal_form" action="{% url 'edit_animal' animal.id%}" method="post" enctype="multipart/form-data">
+            <div class="edit-animal-container-panel-body">
+              {% csrf_token %}
+              <div class="edit-animal-container-panel-body-form-group">
+                <label class="edit-animal-container-panel-body-form-group-label" for="name">Name</label>
+
+                <input type="text" class="edit-animal-container-panel-body-form-text-input" id="name" name="name" value="{{animal.name}}"/>
+                <b><small>Maximum 8 characters</small></b>
+              </div>
+              <div class="edit-animal-container-panel-body-form-group">
+                <label class="edit-animal-container-panel-body-form-group-label">Birthday</label>
+                <div class="edit-animal-container-panel-body-form-input-group">
+                  <span class="edit-animal-container-panel-body-form-input-group-addon"><i class="fa fa-calendar edit-animal-container-panel-body-form-input-group-addon-icon"></i></span>
+                  <input type="date" name="birth_day" class="edit-animal-container-panel-body-form-input-group-addon-birthday-input" id="id_birth_day" value="{{animal.birth_day|date:'Y-m-d'}}" required />
+
+                </div>
+              </div>
+              <div class="edit-animal-container-panel-body-form-group">
+                <label class="edit-animal-container-panel-body-form-group-label" for="gender">Gender</label>
+                <select class="edit-animal-container-panel-body-form-input-select" name="gender" id="gender" >
+                  <option selected>{{animal.gender}}</option>
+                  <option >Male</option>
+                  <option>Female</option>
+                </select>
+              </div>
+              <div class="edit-animal-container-panel-body-form-group">
+                <label class="edit-animal-container-panel-body-form-group-label" for="country_animal">Country select</label>
+
+                <div>
+                  {% include 'country_list.html' %}
+                </div>
+              </div>
+              <div class="edit-animal-container-panel-body-form-group">
+                <label class="edit-animal-container-panel-body-form-group-label">City select</label>
+                <div>
+                  <select name="city_form" class="edit-animal-container-panel-body-form-input-select" data-plugin-selecttwo="" id="city_form" required>
+                    <option value="{{animal.city}}" selected>{{animal.city}}</option>
+                  </select>
+                </div>
+              </div>
+              <div class="edit-animal-container-panel-body-form-group">
+                <label class="edit-animal-container-panel-body-form-group-label">Breed select</label>
+                <div>
+                  <select data-plugin-selecttwo="" class="edit-animal-container-panel-body-form-input-select" name="categ" id="categ_form">
+                    <option value="{{animal.categ}}" selected>
+                        {% if animal.categ == 'A' %} SAVANNAH {% elif animal.categ == 'B'  %} BENGAL {% else %} SPHYNX {% endif %}
+                    </option>
+                    <option value="A">SAVANNAH</option>
+
+                    <option value="B">BENGAL</option>
+
+                    <option value="C">SPHYNX</option>
+                  </select>
+                </div>
+              </div>
+              <div class="edit-animal-container-panel-body-form-group">
+                <label class="edit-animal-container-panel-body-form-group-label" for="priceInput">Offer price</label>
+                <div>
+                  <input type="text" class="edit-animal-container-panel-body-form-text-input" id="priceInput" name="price" value="{{animal.price}}"/>
+                  <b><small class="capital">Your profits after deducting the percentage of the 8paws platform:</small></b> <strong id="my_help_text" style="">0.00 $</strong>
+                </div>
+              </div>
+
+
+              <div></div>
+              <hr style="border-bottom: none !important;" />
+
+              <div class="images-box" id="images-box">
+
+                <div class="image-card">
+                    <label for="priceInput">Image 1</label>
+                    <div class="image-card-div" style="text-align:center;">
+                        <img src="{{animal.images.image_1.url}}" id="display_image1">
+                        <br>
+                        <label for="image_1">choose image</label>
+                        <input type="file" name="image_1" id="image_1" accept=".jpeg,.jpg,.png,.gif">
+                    </div>
+                </div>
+
+                <div class="image-card">
+                    <label for="priceInput">Image 2</label>
+                    <div class="image-card-div" style="text-align:center;">
+                        <img src="{{animal.images.image_2.url}}" id="display_image2">
+                        <br>
+                        <label for="image_2">choose image</label>
+                        <input type="file" name="image_2" id="image_2" accept=".jpeg,.jpg,.png,.gif">
+                    </div>
+                </div>
+
+                <div class="image-card">
+                    <label for="priceInput">Image 3</label>
+                    <div class="image-card-div" style="text-align:center;">
+                        <img src="{{animal.images.image_3.url}}" id="display_image3">
+                        <br>
+                        <label for="image_3">choose image</label>
+                        <input type="file" name="image_3" id="image_3" accept=".jpeg,.jpg,.png,.gif">
+                    </div>
+                </div>
+
+                <div class="image-card">
+                    <label for="priceInput">Image 4</label>
+                    <div class="image-card-div" style="text-align:center;">
+                        <img src="{{animal.images.image_4.url}}" id="display_image4">
+                        <br>
+                        <label for="image_4">choose image</label>
+                        <input type="file" name="image_4" id="image_4" accept=".jpeg,.jpg,.png,.gif">
+                    </div>
+                </div>
+
+
+
+
+              </div>
+            </div>
+            <input type="file" id="file-input2" name="file-input2" accept=".jpg, .jpeg, .png, .gif" multiple style="display: none;" />
+
+            <button type="submit" id="submit-all" class="submit-btn">Submit</button>
+            <button type="reset" class="reset-btn">Reset</button>
+            <button id="delete-animal" class="delete-btn" data-secondurl="{% url 'profile_ads' %}" data-url="{% url 'delete_animal' animal.id %}">Delete Cat</button>
+          </form>
+            
+        </section>
+      </div>
+    </div>
+  </div>
+
+  <script src="{% static 'js/edit_animal.js' %}"></script>
+
+{% endblock %}

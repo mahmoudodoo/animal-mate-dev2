@@ -1,0 +1,176 @@
+.main-container {
+    margin-left: 305px;
+    width: 1555px;
+    max-width: 100%;
+    height: 900px;
+    display: flex;
+    flex-direction: column; /* Change to column */
+}
+
+.edit-location-container {
+    color: #777;
+    font-family: 'Cairo', sans-serif;
+    line-height: 22px;
+    font-size: 13px;
+    box-sizing: border-box;
+    margin-left: -15px;
+    margin-right: -15px;
+    position: relative; /* Ensure it's a positioned element */
+    z-index: 1; /* Lower z-index value to place it behind the navbar */
+}
+
+.edit-location-container-col{
+    color: #777;
+    font-family: 'Cairo', sans-serif;
+    line-height: 22px;
+    font-size: 13px;
+    box-sizing: border-box;
+    position: relative;
+    min-height: 1px;
+    padding-left: 15px;
+    padding-right: 15px;
+    float: left;
+    width: 100%;
+}
+
+.edit-location-container-col-header{
+    font-family: 'Cairo', sans-serif;
+    line-height: 22px;
+    font-size: 13px;
+    box-sizing: border-box;
+    text-align: left;
+    margin-bottom: 10px;
+    font-weight: bold !important;
+    padding: 10px;
+    letter-spacing: 1px;
+    border-radius: 5px;
+    background-color: #f8d7da !important;
+    color: #58151c !important;
+    justify-content: space-between;
+    align-items: center;
+    border: 1px solid #f1aeb5 !important;
+    display: flex;
+}
+
+.edit-location-container-col-header-span{
+    font-family: 'Cairo', sans-serif;
+    line-height: 22px;
+    font-size: 13px;
+    text-align: left;
+    font-weight: bold !important;
+    letter-spacing: 1px;
+    color: #58151c !important;
+    box-sizing: border-box;
+}
+.edit-location-container-col-header-btn{
+    box-sizing: border-box;
+    font: inherit;
+    overflow: visible;
+    cursor: pointer;
+    font-family: inherit;
+    font-size: inherit;
+    line-height: inherit;
+    background-color: #d2312d;
+    color: #fff;
+    border: 1px solid #e7b9b8;
+    padding: 5px 10px;
+    border-radius: 5px;
+    text-transform: capitalize;
+    margin: 0;
+}
+
+.edit-location-container-col-section{
+    color: #777;
+    font-family: 'Cairo', sans-serif;
+    line-height: 22px;
+    font-size: 13px;
+    box-sizing: border-box;
+    display: block;
+    margin-bottom: 20px;
+    border-radius: 4px;
+    background: transparent;
+    box-shadow: none;
+    border: none;
+}
+
+.edit-location-container-col-section-header{
+    color: #777;
+    font-family: 'Cairo', sans-serif;
+    line-height: 22px;
+    font-size: 13px;
+    box-sizing: border-box;
+    display: block;
+    background: #f6f6f6;
+    border-radius: 5px 5px 0 0;
+    border-bottom: 1px solid #DADADA;
+    padding: 18px;
+    position: relative;
+}
+
+.edit-location-container-col-section-header-title{
+    box-sizing: border-box;
+    font-family: inherit;
+    letter-spacing: -1px;
+    margin-top: 0;
+    margin-bottom: 0;
+    color: #33353f;
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 20px;
+    padding: 0;
+    text-transform: none;
+}
+
+
+.edit-location-container-col-section-map-container{
+    color: #777;
+    font-family: 'Cairo', sans-serif;
+    line-height: 22px;
+    font-size: 13px;
+    box-sizing: border-box;
+    padding: 15px;
+    background: #fdfdfd;
+    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.05);
+    border-radius: 0 0 5px 5px;
+}
+
+.edit-location-container-col-section-map-container-map{
+    color: #777;
+    font-family: 'Cairo', sans-serif;
+    line-height: 22px;
+    font-size: 13px;
+    box-sizing: border-box;
+    min-height: calc(100vh - 300px);
+    position: relative;
+    overflow: hidden;
+}
+
+.edit-location-container-col-section-map-container-btn{
+    box-sizing: border-box;
+    font: inherit;
+    margin: 0;
+    font-family: inherit;
+    outline: none;
+    display: inline-block;
+    text-align: center;
+    vertical-align: middle;
+    touch-action: manipulation;
+    border: 1px solid transparent;
+    padding: 6px 12px;
+    font-size: 14px;
+    line-height: 1.42857143;
+    border-radius: 4px;
+    user-select: none;
+    color: #ffffff !important;
+    background: #08bcaa !important;
+    border-color: #ffff !important;
+    margin-bottom: 10px;
+    cursor: pointer;
+    white-space: normal;
+    text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.25);
+    margin-top: 20px;
+    width: 105px;
+    font-weight: bold;
+    letter-spacing: 1px;
+    margin-right: 20px;
+}

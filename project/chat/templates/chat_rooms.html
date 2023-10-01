@@ -1,0 +1,34 @@
+{% extends 'base.html' %}
+{% load static %}
+{% load i18n %}
+<!-- SPECIFIC CSS -->
+{% block content %}
+<link rel="stylesheet" href="{% static 'css/chat_rooms.css' %}">
+{% include 'profile_sidenav.html' %}
+
+<div class="main-container">
+
+    <div class="rooms-container">
+        {% if user_rooms %}
+            {% for room in user_rooms %}
+                <!-- Room Card -->
+                <div class="room-card">
+                    <div class="room-info">
+                        <h2>{{ room.name }}</h2>
+                        <p>User 1: {{ room.user_1.username }}</p>
+                        <p>User 2: {{ room.user_2.username }}</p>
+                        <p>Date Created: {{ room.date_created }}</p>
+                    </div>
+                    <div class="room-buttons">
+                        <button class="close-room-button">Close Room</button>
+                        <a href="{% url 'chat_room' room.slug %}" class="open-room-button">Open Room</a>
+                    </div>
+                </div>
+            {% endfor %}
+        {% else %}
+            <p>No chat rooms found.</p>
+        {% endif %}
+    </div>
+
+</div>
+{% endblock %}

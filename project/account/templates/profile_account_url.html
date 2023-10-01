@@ -1,0 +1,30 @@
+{% extends 'base.html' %}
+{% load static %}
+{% load i18n %}
+<!-- SPECIFIC CSS -->
+{% block content %}
+<link rel="stylesheet" href="{% static 'css/profile_account_url.css' %}">
+{% include 'profile_sidenav.html' %}
+
+<div class="main-container">
+    <div class="link-title-container">
+        <h1 class="link-title">Share your listed cats.</h1>
+    </div>
+    <div class="copy-panel">
+        <button id="copy-button">
+            <i class="fa fa-files-o" aria-hidden="true"></i>
+        </button>
+        <div class="copy-content">
+            <p class="url-text">https://www.8paws.net/animals?user=750</p>
+        </div>
+    </div>
+
+    <button id="share-btn" class="share-btn">
+        <i class="fa fa-share" aria-hidden="true"></i> Share on social media
+    </button>
+
+</div>
+
+
+<script src="{% static 'js/account_url.js' %}"></script>
+{% endblock %}

@@ -1,0 +1,44 @@
+{% extends 'base.html' %}
+{% load static %}
+{% load i18n %}
+<!-- SPECIFIC CSS -->
+{% block content %}
+<link rel="stylesheet" href="{% static 'css/login.css' %}">
+<div class="top-navigation">
+    <a href="{% url 'home' %}">Home</a> &gt; Login
+    <h2 class="sign-up-text">Sign Up</h2>
+  </div>
+  
+  <div class="outcontainer">
+    <div class="login-container">
+
+        <form method="POST">
+            {% csrf_token %}
+            <div class="form-group">
+                <input type="email"  name="email" id="email" placeholder="{% trans 'Email' %}*">{{form.email.errors}}
+            </div>
+            <div class="form-group">
+                <input type="password" name="password" id="password_in" value="" placeholder="{% trans 'Password' %}*">{{form.password.errors}}
+            </div>
+            {% if form.errors %}
+                <p class=" " style="color: red;">
+                    {% trans 'Email and password not match' %}
+                </p>
+            {% endif %}
+            <div class="hyperlink-container">
+                <a class="hyperlink-label" href="{% url 'register' %}">{% trans 'New Account' %}</a>
+                <a class="hyperlink-label2" id="forgot" href="{% url 'register' %}">
+                    {% trans 'Lost Password?' %}
+                    <span class="divider"> / </span>
+                    <span id="reset" class="hyperlink-label" href="{% url 'home' %}">{% trans 'Validate account' %}</span>
+                </a>
+            </div>
+            <br>
+            
+            <div ><input class="sub-btn" type="submit" value="{% trans 'Log In' %}" class="btn_1 full-width"></div>
+        </form>
+
+
+    </div>
+  </div>
+{% endblock %}

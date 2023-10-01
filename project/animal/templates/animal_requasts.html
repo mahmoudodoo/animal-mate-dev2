@@ -1,0 +1,30 @@
+{% extends 'base.html' %}
+{% load static %}
+{% load i18n %}
+<!-- SPECIFIC CSS -->
+{% block content %}
+<link rel="stylesheet" href="{% static 'css/animal_requasts.css' %}">
+{% include 'profile_sidenav.html' %}
+
+<div class="main-container">
+    {% for request in animal_requests%}
+    <div class="case-card waiting">
+        <h3>Animal {{request.name}}</h3>
+        <p><strong>User:</strong> {{request.user}}</p>
+        <p>Animal Birth Day: {{request.birth_day}}</p>
+        <p>Country - City: {{request.city}}</p>
+        <p>Price: {{request.price}}</p>
+        <div class="status">
+          <p>Status:</p>
+          <ul>
+            <li {% if request.status == '1' %}class="active-blue"{% endif %}>Under Review</li>
+            <li {% if request.status == '2' %}class="active-red"{% endif %}>Rejected</li>
+            <li {% if request.status == '3' %}class="active-green"{% endif %}>Accepted</li> 
+          </ul>
+        </div>
+      </div>
+      {% endfor %}
+</div>
+
+
+{% endblock %}

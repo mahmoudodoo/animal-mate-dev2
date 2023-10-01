@@ -1,0 +1,98 @@
+{% extends 'base.html' %}
+{% load static %}
+{% load i18n %}
+<!-- SPECIFIC CSS -->
+{% block content %}
+<link rel="stylesheet" href="{% static 'css/profile_home.css' %}">
+{% include 'profile_sidenav.html' %}
+<div class="main-container">
+    <div class="top-container">
+        <!-- card 1 -->
+        <div class="card">
+            <div class="card-icon">
+                <!-- Your icon content here -->
+                <i class="fa fa-bullhorn" aria-hidden="true"></i>
+            </div>
+            <div class="card-details">
+                <div class="label-top-left">
+                    <span class="text-title">My Ads</span>
+                    <br>
+                    <span class="text-num">0</span>
+                </div>
+                <div class="label-bottom-right">
+                    <a class="text-link">(View All)</a>
+                </div>
+            </div>
+        </div>
+        
+        <!-- card 2 -->
+        <div class="card">
+            <div class="card-icon">
+                <!-- Your icon content here -->
+                <i class="fa fa-money"></i>
+            </div>
+            <div class="card-details">
+                <div class="label-top-left">
+                    <span class="text-title">My Sales</span>
+                    <br>
+                    <span class="text-num">0 TRY</span>
+                </div>
+                <div class="label-bottom-right">
+                <a class="text-link">(Review)</a>    
+                </div>
+            </div>
+        </div>
+        <!-- card 3 -->
+        <div class="card">
+            <div class="card-icon">
+                <!-- Your icon content here -->
+                <i class="fa fa-university"></i>
+            </div>
+            <div class="card-details">
+                <div class="label-top-left">
+                    <span class="text-title">My Requests</span>
+                    <br>
+                    <span class="text-num">0</span>
+                </div>
+                <div class="label-bottom-right">
+                    <a class="text-link">(Review)</a>
+                    </div>
+            </div>
+        </div>
+
+        <!-- card 4 -->
+        <div class="card">
+            <div class="card-icon">
+                <!-- Your icon content here -->
+                <i class="fa fa-usd" aria-hidden="true"></i>
+            </div>
+            <div class="card-details">
+                <div class="label-top-left">
+                    <span class="text-title">My Ads earnings</span>
+                    <br>
+                    <span class="text-num">0 TRY</span>
+                </div>
+                <div class="label-bottom-right">
+                    <a class="text-link">Your total earnings: (0 TRY) x 25% site percentage</a>
+                </div>
+            </div>
+        </div>
+
+    </div>
+    <div class="chart-container">
+        <div class="chart-header">
+            <h2 class="chart-title">Order Chart</h2>
+            <p class="chart-hint" >This chart describes your orders in the last 10 days.</p>
+        </div>
+        <!-- Add your chart content here -->
+        <div class="chart-container">
+            <canvas id="order-chart"></canvas>
+        </div>
+
+    </div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<script src="{% static 'js/profile_home.js' %}"></script>
+{% include 'order_chart_data.html' %}
+{% endblock %}

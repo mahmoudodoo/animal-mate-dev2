@@ -1,0 +1,102 @@
+{% extends 'base.html' %}
+{% load static %}
+{% load i18n %}
+<!-- SPECIFIC CSS -->
+{% block content %}
+<link rel="stylesheet" href="{% static 'css/profile_edit.css' %}">
+<link rel="stylesheet" href="{% static 'css/change_password_wizard.css' %}">
+{% include 'profile_sidenav.html' %}
+
+<div class="main-container">
+    {% include 'change_password_form.html' %}
+    <div class="section1">
+        <form method="post" action="{% url 'upload_profile_image' %}" enctype="multipart/form-data">
+        <div class="personal-image-container">
+           
+            <label for="file-upload" class="upload-image-part">
+                <img src="{{user_profile.profile_image.url}}" alt="Upload Image" width="150" height="150">
+                <input type="file" id="file-upload" name="profile_image" class="upload-button">
+            </label>
+            <span class="username-label">{{ user_profile.username }}</span>
+            <br>
+            
+                {% csrf_token %}
+            <button type="submit" class="upload-button-img" id="upload-button-img" disabled>Upload image</button>
+            
+            <div class="profile-completion">
+                <h1 class="info-text-title">Profile Completion</h1>
+                <div class="progress-bar-back">
+                <div class="progress-bar" style="background-color: #60d1c5;"></div>
+                </div>
+                <br>
+                <label class="info-text">
+                    <input class="info-checkbox" type="checkbox" checked disabled>
+                    <span class="custom-checkbox"></span>
+                    Update Profile Picture
+                </label>
+                <label class="info-text">
+                    <input class="info-checkbox" type="checkbox" checked disabled>
+                    <span class="custom-checkbox"></span>
+                    Complete Personal Information
+                </label>
+                <a href="#" class="info-text">Add Cat</a>
+            </div>
+        
+        </div>
+        </form>
+        <div class="popular-cats-container">
+            <div class="popular-cats-header">Popular Cats</div>
+            <hr>
+            <ul class="cat-list">
+                <li>
+                    <img src="{% static 'imgs/self.jpg' %}" alt="Cat 1" width="50" height="50" class="cat-image">
+                    <a href="#" class="cat-name">Cat Name 1</a>
+                </li>
+
+                <li>
+                    <img src="{% static 'imgs/self.jpg' %}" alt="Cat 2" width="50" height="50" class="cat-image">
+                    <a href="#" class="cat-name">Cat Name 2</a>
+                </li>
+
+                <li>
+                    <img src="{% static 'imgs/self.jpg' %}" alt="Cat 3" width="50" height="50" class="cat-image">
+                    <a href="#" class="cat-name">Cat Name 3</a>
+                </li>
+                <!-- Repeat the list items for other cats -->
+            </ul>
+        </div>
+    </div>
+    
+    <div class="section2">
+        <div class="personal-info-container">
+            <div class="info-text">Personal Information</div>
+            <br>
+            <form method="post" action="{% url 'update_profile' %}">
+                {% csrf_token %}
+                <label for="full-name" class="info-text">Full Name</label>
+                <input type="text" id="full-name" name="full_name" placeholder="Full Name" class="input-field" value="{{ user_profile.full_name }}">
+                <label for="username" class="info-text">Username</label>
+                <input type="text" id="username" name="username" placeholder="Username" class="input-field" value="{{ user_profile.username }}">
+                <label for="mobile" class="info-text">Mobile</label>
+                <input type="text" id="mobile" name="mobile" placeholder="Mobile" class="input-field" value="{{ user_profile.mobile_number }}">
+                
+                <label for="activate-whatsapp" class="info-text">
+                    <input type="checkbox" id="activate-whatsapp" name="activate_whatsapp" class="input-checkbox" {% if user_profile.activate_whatsapp %}checked{% endif %} value="true">
+                    Activate WhatsApp
+                </label>
+                <br>
+                <label for="email" class="info-text">Email</label>
+                <input type="email" id="email" name="email" placeholder="Email" class="input-field" value="{{ user_profile.email }}">
+                <div class="submit-card">
+                    <button type="submit" class="submit-button" style="background-color: #24b9a6; color: aliceblue;">Submit</button>
+                    <input type="button" class="reset-button" style="background-color: #3b4f4d; color: aliceblue;" value="Reset">
+                    <input type="button" class="change-password-button" value="Change Password" data-url="{% url 'change_password' %}">
+                </div>
+            </form>
+            
+        </div>
+    </div>
+</div>
+
+<script src="{% static 'js/profile_edit.js' %}"></script>
+{% endblock %}

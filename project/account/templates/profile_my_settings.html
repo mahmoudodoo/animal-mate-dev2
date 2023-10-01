@@ -1,0 +1,64 @@
+{% extends 'base.html' %}
+{% load static %}
+{% load i18n %}
+<!-- SPECIFIC CSS -->
+{% block content %}
+<link rel="stylesheet" href="{% static 'css/profile_my_settings.css' %}">
+{% include 'profile_sidenav.html' %}
+<div class="main-container">
+
+    <div class="settings-container">
+        <div class="settings-card">
+            <i class="fa fa-location-arrow card-icon"></i>
+            <a href="{% url 'edit_location' %}" class="card-link">Change Location</a>
+        </div>
+
+        <div class="settings-card">
+            <i class="fa fa-commenting-o card-icon"></i>
+            <a href="{% url 'chat_rooms' %}" class="card-link">Chat Page</a>
+        </div>
+
+        <div class="settings-card">
+
+            <p class="lang-message-text">Choose the language you prefer:</p>
+
+            <div class="select-menu" id="select-menu">
+                <div class="select" id="select-button">
+                    <span class="my-select-rate" id="selected-option">
+                        <strong>AR</strong>
+                    </span>
+                    <i class="fa fa-angle-down" id="toggle-icon"></i>
+                </div>
+                <div class="options-list" id="options-list">
+                    <div class="option" value="en">
+                        <strong>EN</strong>
+                    </div>
+                    <div class="option selected" value="ar">
+                        <strong>AR</strong>
+                    </div>
+                </div>
+            </div>
+            
+
+
+
+            <div class="center-btn">
+                <input id="input-submit" type="submit" value="Submit" class="submit-btn">
+            </div>
+            <p class="red-message">Note: You will receive email messages in the language that you have chosen.</p>
+
+        </div>
+
+        <div class="settings-card">
+            <i class="fa fa-sign-out card-icon"></i>
+            <a href="{% url 'logout' %}" class="card-link">Logout</a>
+        </div>
+
+
+    </div>
+
+
+
+</div>
+<script src="{% static 'js/profile_my_settings.js' %}"></script>
+{% endblock %}

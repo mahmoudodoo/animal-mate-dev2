@@ -1,0 +1,136 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2023-09-06 08:29+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+#: account/forms/sign_up_form.py:11
+msgid "Enter a valid email address."
+msgstr ""
+
+#: account/forms/sign_up_form.py:14
+msgid "Enter your full name."
+msgstr ""
+
+#: account/forms/sign_up_form.py:15
+msgid "Accept the terms and conditions."
+msgstr ""
+
+#: account/forms/update_account_form.py:24
+msgid "Mobile number must start with a plus sign (+)."
+msgstr ""
+
+#: account/forms/update_account_form.py:27
+msgid ""
+"Invalid mobile number format. It should contain at least 10 digits after the "
+"plus sign."
+msgstr ""
+
+#: account/forms/update_account_form.py:37
+msgid "Passwords do not match."
+msgstr ""
+
+#: animal/models/animal.py:46
+msgid "Accepted"
+msgstr ""
+
+#: animal/models/animal.py:47
+msgid "Rejected"
+msgstr ""
+
+#: animal/models/animal.py:48
+msgid "Under Review"
+msgstr ""
+
+#: animal/models/animal.py:49
+msgid "Delayed"
+msgstr ""
+
+#: animal/models/animal.py:57
+msgid "Animal request date"
+msgstr ""
+
+#: payment/models/payment.py:17
+msgid "Payout date"
+msgstr ""
+
+#: proccess/models/connect.py:24
+msgid "Very Bad"
+msgstr ""
+
+#: proccess/models/connect.py:25
+msgid "Bad"
+msgstr ""
+
+#: proccess/models/connect.py:26
+msgid "Good"
+msgstr ""
+
+#: proccess/models/connect.py:27
+msgid "Excellent"
+msgstr ""
+
+#: proccess/models/connect.py:28
+msgid "Very Excellent"
+msgstr ""
+
+#: proccess/models/connect.py:37
+msgid "connect sender user"
+msgstr ""
+
+#: proccess/models/connect.py:43
+msgid "connect receiver user"
+msgstr ""
+
+#: proccess/models/connect.py:49
+msgid "connect sender animal"
+msgstr ""
+
+#: proccess/models/connect.py:55
+msgid "connect receiver animal"
+msgstr ""
+
+#: proccess/models/connect.py:61
+msgid "connect date created"
+msgstr ""
+
+#: proccess/models/connect.py:65
+msgid "connect description"
+msgstr ""
+
+#: proccess/models/connect.py:70
+msgid "connect status"
+msgstr ""
+
+#: proccess/models/connect.py:74
+msgid "first confirm"
+msgstr ""
+
+#: proccess/models/connect.py:78
+msgid "second confirm"
+msgstr ""
+
+#: proccess/models/connect.py:82
+msgid "connect is chat"
+msgstr ""
+
+#: proccess/models/connect.py:96
+msgid "rate date created"
+msgstr ""
+
+#: proccess/models/connect.py:98
+msgid "preview_in_page"
+msgstr ""

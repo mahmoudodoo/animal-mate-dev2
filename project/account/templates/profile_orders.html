@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+{% load static %}
+{% load i18n %}
+<!-- SPECIFIC CSS -->
+{% block content %}
+<link rel="stylesheet" href="{% static 'css/profile_orders.css' %}">
+{% include 'profile_sidenav.html' %}
+<div class="main-container">
+<h1>
+ Orders
+</h1>    
+</div>
+
+
+{% endblock %}

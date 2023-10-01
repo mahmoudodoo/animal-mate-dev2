@@ -1,0 +1,35 @@
+<script>
+    const orderData = {{ order_data|safe }}; 
+    
+    // Generate the last 10 dates starting from today
+    const today = new Date();
+    const labels = [];
+    for (let i = 0; i < 10; i++) {
+        const date = new Date(today);
+        date.setDate(today.getDate() - i);
+        const formattedDate = date.toLocaleDateString('en-US', { month: 'short', day: 'numeric' });
+        labels.push(formattedDate);
+    }
+    
+    const ctx = document.getElementById('order-chart').getContext('2d');
+    const chart = new Chart(ctx, {
+        type: 'bar',
+        data: {
+            labels: labels.reverse(), // Reverse to display in chronological order
+            datasets: [{
+                label: 'Orders',
+                data: orderData,
+                backgroundColor: 'rgba(52, 152, 219, 0.6)',
+            }],
+        },
+        options: {
+            scales: {
+                y: {
+                    beginAtZero: true,
+                },
+            },
+        },
+    });
+    
+    </script>
+    

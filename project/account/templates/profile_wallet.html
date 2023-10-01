@@ -1,0 +1,57 @@
+{% extends 'base.html' %}
+{% load static %}
+{% load i18n %}
+<!-- SPECIFIC CSS -->
+{% block content %}
+<link rel="stylesheet" href="{% static 'css/profile_wallet.css' %}">
+{% include 'profile_sidenav.html' %}
+<div class="main-container">
+
+
+
+
+    <section class="wallet-container">
+
+        <div class="balance-div">
+            <h1 id="capital" class="balance-text">Available Balance</h1>
+            <div class="user-balance-div">
+                <h1 class="user-balance-text" name="user_balance">
+                    0 TRY
+                </h1>
+            </div>
+        </div>
+
+
+        <div class="wallet-header">
+            <h2>Wallet</h2>
+        </div>
+        <div class="wallet-body">
+
+
+            <div class="wallet-no-price" style="height: 400px;">
+                <p>You do not have credit, you can start and get credit by adding a new ad for your male cat and
+                    receiving requests.</p>
+            </div>
+
+            <br>
+            <ul>
+                <li>
+                    <span>You do not have the authority to change your bank account, you can request to change your bank
+                        account by contacting technical support via <a href="mailto:info@8paws.net" target="_blank"
+                            rel="noopener noreferrer"><b>info@8paws.net</b></a></span> <br>
+                </li>
+                <li>
+                    <span id="capital">Help: To know your bank's Swift code through the following link: <a
+                            href="https://www.theswiftcodes.com/" target="_blank"
+                            rel="noopener noreferrer"><b>Www.Theswiftcodes.Com</b></a></span>
+                </li>
+            </ul>
+            <br>
+            <br>
+        </div>
+    </section>
+
+
+</div>
+
+{% endblock %}

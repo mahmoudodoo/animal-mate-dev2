@@ -1,0 +1,417 @@
+.main-container {
+    margin-left: 305px;
+    width: 1555px;
+    max-width: 100%;
+    height: 900px;
+    display: flex;
+    flex-direction: column;
+}
+
+.add-animal-container{
+    color: #777;
+    font-family: 'Cairo', sans-serif;
+    line-height: 22px;
+    font-size: 13px;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+}
+
+.add-animal-container-panel{
+    color: #777;
+    font-family: 'Cairo', sans-serif;
+    line-height: 22px;
+    font-size: 13px;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    display: block;
+    margin-bottom: 20px;
+    border-radius: 4px;
+    background: transparent;
+    box-shadow: none;
+    border: none;
+}
+.add-animal-container-col{
+
+    color: #777;
+    font-family: 'Cairo', sans-serif;
+    line-height: 22px;
+    font-size: 13px;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    position: relative;
+    min-height: 1px;
+    padding-left: 15px;
+    padding-right: 15px;
+    float: left;
+    width: 100%;
+}
+
+.add-animal-container-panel-header{
+    color: #777;
+    font-family: 'Cairo', sans-serif;
+    line-height: 22px;
+    font-size: 13px;
+    margin: 0;
+    box-sizing: border-box;
+    display: block;
+    background: #f6f6f6;
+    border-radius: 5px 5px 0 0;
+    border-bottom: 1px solid #DADADA;
+    padding: 18px;
+    position: relative;
+}
+.add-animal-container-panel-body{
+    color: #777;
+    font-family: 'Cairo', sans-serif;
+    line-height: 22px;
+    font-size: 13px;
+    margin: 0;
+    box-sizing: border-box;
+    background: #fdfdfd;
+    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.05);
+    border-radius: 0 0 5px 5px;
+    padding: 25px 80px;
+}
+
+.add-animal-container-panel-body-form{
+    color: #777;
+    font-family: 'Cairo', sans-serif;
+    line-height: 22px;
+    font-size: 13px;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.add-animal-container-panel-body-form-group{
+
+    color: #777;
+    font-family: 'Cairo', sans-serif;
+    line-height: 22px;
+    font-size: 13px;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    margin-left: -15px;
+    margin-right: -15px;
+    border-bottom: 1px solid #eff2f7;
+    padding-bottom: 15px;
+    margin-bottom: 15px;
+}
+
+.add-animal-container-panel-body-form-group-label{
+    color: #777;
+    font-family: 'Cairo', sans-serif;
+    line-height: 22px;
+    font-size: 13px;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    display: inline-block;
+    max-width: 100%;
+    margin-bottom: 5px;
+    font-weight: normal;
+}
+
+.add-animal-container-panel-body-form-text-input{
+    box-sizing: border-box;
+    font: inherit;
+    margin: 0;
+    font-family: inherit;
+    outline: none;
+    display: block;
+    width: 100%;
+    height: 34px;
+    padding: 6px 12px;
+    font-size: 14px;
+    line-height: 1.42857143;
+    color: #555555;
+    background-color: #ffffff;
+    background-image: none;
+    border: 1px solid #cccccc;
+    border-radius: 4px;
+    box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+    transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
+}
+
+.add-animal-container-panel-body-form-input-group{
+
+    color: #777;
+    font-family: 'Cairo', sans-serif;
+    line-height: 22px;
+    font-size: 13px;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    position: relative;
+    display: table;
+    border-collapse: separate;
+}
+.add-animal-container-panel-body-form-input-group-addon{
+    font-family: 'Cairo', sans-serif;
+    border-collapse: separate;
+    margin: 0;
+    box-sizing: border-box;
+    display: table-cell;
+    width: 1%;
+    white-space: nowrap;
+    vertical-align: middle;
+    padding: 6px 12px;
+    font-size: 14px;
+    font-weight: normal;
+    line-height: 1;
+    color: #555555;
+    text-align: center;
+    background-color: #eeeeee;
+    border: 1px solid #cccccc;
+    border-radius: 4px;
+    border-bottom-right-radius: 0;
+    border-top-right-radius: 0;
+    border-right: 0;
+}
+
+.add-animal-container-panel-body-form-input-group-addon-icon{
+    border-collapse: separate;
+    white-space: nowrap;
+    color: #555555;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    display: inline-block;
+    font: normal normal normal 14px/1 FontAwesome;
+    font-size: inherit;
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased;
+    transform: translate(0, 0);
+}
+
+.add-animal-container-panel-body-form-input-group-addon-birthday-input{
+
+    border-collapse: separate;
+    box-sizing: border-box;
+    color: inherit;
+    font: inherit;
+    font-family: inherit;
+    font-size: inherit;
+    outline: none;
+    border-radius: 4px;
+    direction: ltr;
+    padding: 10px;
+    margin: 0 auto;
+    line-height: 1.1em;
+}
+.add-animal-container-panel-body-form-input-gender{
+    color: #777;
+    font-family: 'Cairo', sans-serif;
+    line-height: 22px;
+    font-size: 13px;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.add-animal-container-panel-body-form-input-select{
+    box-sizing: border-box;
+    font: inherit;
+    margin: 0;
+    text-transform: none;
+    font-family: inherit;
+    outline: none;
+    display: block;
+    width: 100%;
+    height: 34px;
+    padding: 6px 12px;
+    font-size: 14px;
+    line-height: 1.42857143;
+    color: #555555;
+    background-color: #ffffff;
+    background-image: none;
+    border: 1px solid #cccccc;
+    border-radius: 4px;
+    box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+    transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
+}
+
+.add-animal-container-panel-body-form-input-select option{
+    font: inherit;
+    text-transform: none;
+    font-family: inherit;
+    font-size: 14px;
+    line-height: 1.42857143;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.add-animal-container-panel-body-form-download-btn{
+    font-family: 'Cairo', sans-serif;
+    line-height: 22px;
+    margin: 0;
+    box-sizing: border-box;
+    outline: none !important;
+    text-align: center;
+    display: block;
+    background-color: #08bcaa;
+    border-radius: 2px;
+    padding: 5px 10px;
+    cursor: pointer;
+    font-size: 15px;
+    font-weight: bold;
+    text-decoration: none !important;
+    color: #fff !important;
+    min-width: 130px;
+    margin-left: auto;
+}
+
+.drag-drop-files-box{
+    color: #777;
+    font-family: 'Cairo', sans-serif;
+    line-height: 22px;
+    font-size: 13px;
+    margin: 0;
+    box-sizing: border-box;
+    position: relative;
+    border: 1px solid rgba(0, 0, 0, 0.03);
+    min-height: 360px;
+    border-radius: 3px;
+    background: rgba(0, 0, 0, 0.03);
+    padding: 23px;
+    cursor: pointer;
+}
+
+.submit-btn{
+    box-sizing: border-box;
+    font: inherit;
+    margin: 0;
+    overflow: visible;
+    text-transform: none;
+    font-family: inherit;
+    display: inline-block;
+    margin-bottom: 0;
+    font-weight: normal;
+    text-align: center;
+    vertical-align: middle;
+    touch-action: manipulation;
+    cursor: pointer;
+    background-image: none;
+    padding: 6px 12px;
+    font-size: 14px;
+    line-height: 1.42857143;
+    border-radius: 4px;
+    user-select: none;
+    white-space: normal;
+    color: #ffffff;
+    text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.25);
+    background-color: #08bcaa !important;
+    border: none !important;
+}
+.reset-btn{
+    box-sizing: border-box;
+    font: inherit;
+    margin: 0;
+    overflow: visible;
+    text-transform: none;
+    font-family: inherit;
+    display: inline-block;
+    margin-bottom: 0;
+    font-weight: normal;
+    text-align: center;
+    vertical-align: middle;
+    touch-action: manipulation;
+    cursor: pointer;
+    padding: 6px 12px;
+    font-size: 14px;
+    line-height: 1.42857143;
+    border-radius: 4px;
+    user-select: none;
+    white-space: normal;
+    text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.25);
+    color: #ffffff !important;
+    background: #3b4f4d !important;
+    border: none !important;
+}
+
+.download-label{
+    color: #777;
+    font-family: 'Cairo', sans-serif;
+    line-height: 22px;
+    font-size: 13px;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    display: inline-block;
+    max-width: 100%;
+    font-weight: normal;
+    margin-bottom: 22px;
+}
+.download-icon{
+    text-align: center;
+    cursor: pointer;
+    color: #fff !important;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    display: inline-block;
+    font: normal normal normal 14px/1 FontAwesome;
+    font-size: inherit;
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased;
+    transform: translate(0, 0);
+}
+.form-group-download{
+    color: #777;
+    font-family: 'Cairo', sans-serif;
+    line-height: 22px;
+    font-size: 13px;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    margin-left: -15px;
+    margin-right: -15px;
+    border-bottom: 1px solid #eff2f7;
+    padding-bottom: 15px;
+    margin-bottom: 15px;
+    display: flex;
+    align-items: start;
+}
+
+/* Drop Zone */
+
+/* File Card */
+.file-card {
+    display: inline-block;
+    width: 114px;
+    height: 172px;
+    margin: 10px;
+    text-align: center;
+    padding: 10px;
+    border: 1px solid #ccc;
+    background-color: #f9f9f9;
+  }
+  
+  .file-card img {
+    width: 100px;
+    height: 100px;
+  }
+  
+  .file-card .file-size {
+    font-size: 12px;
+    color: #666;
+    margin-top: 5px;
+  }
+  
+  .file-card .remove-button {
+    width: 100px;
+    height: 32px;
+    background-color: red;
+    color: white;
+    font-size: 12px;
+    margin-top: 5px;
+    cursor: pointer;
+  }
+  

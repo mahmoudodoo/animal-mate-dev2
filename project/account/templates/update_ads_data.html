@@ -1,0 +1,40 @@
+<div id="ads_data">
+  <div class="main-container">
+    <div class="cards-container" id="cardsContainer">
+      <!-- Start Card 1 -->
+      {% for ads_animal in ads_animals %}
+        <div class="card">
+          <div class="card-header">
+            <span>{{ ads_animal.name }}</span>
+            <a href="{% url 'edit_animal' ads_animal.id %}"><i class="fa fa-pencil-square-o"></i></a>
+              <button class="delete-ads-button" data-url="{% url 'delete_animal' ads_animal.id %}" data-animal-id="{{ ads_animal.id }}"><i class="fas fa-trash" style="color: red;"></i></button>
+          </div>
+          <div class="card-body">
+            <div class="card-images">
+              <div class="slideshow-container">
+                <!-- Modify your HTML structure as follows -->
+                <div class="mySlides">
+                  <img class="card-image" src="{{ ads_animal.image_1.url }}" alt="Image 1" />
+                </div>
+
+                <div class="mySlides">
+                  <img class="card-image" src="{{ ads_animal.image_2.url }}" alt="Image 2" />
+                </div>
+
+                <div class="mySlides">
+                  <img class="card-image" src="{{ ads_animal.image_3.url }}" alt="Image 3" />
+                </div>
+
+                <div class="mySlides">
+                  <img class="card-image" src="{{ ads_animal.image_4.url }}" alt="Image 4" />
+                </div>
+
+              </div>
+            </div>
+          </div>
+        </div>
+      {% endfor %}
+      <!-- end Card 1 -->
+    </div>
+  </div>
+</div>

@@ -1,0 +1,124 @@
+{% extends 'base.html' %}
+{% load static %}
+{% load i18n %}
+<!-- SPECIFIC CSS -->
+{% block content %}
+  <link rel="stylesheet" href="{% static 'css/add_animal.css' %}" />
+  {% include 'profile_sidenav.html' %}
+
+  <div class="main-container">
+    <div class="add-animal-container">
+      <div class="add-animal-container-col">
+        <section class="add-animal-container-panel">
+          <header class="add-animal-container-panel-header">
+            <h2>Cat Info</h2>
+          </header>
+          <form class="add-animal-container-panel-body-form" id="add_animal_form" action="{% url 'add_animal' %}" method="post" enctype="multipart/form-data">
+            <div class="add-animal-container-panel-body">
+              {% csrf_token %}
+              <div class="add-animal-container-panel-body-form-group">
+                <label class="add-animal-container-panel-body-form-group-label" for="name">Name</label>
+
+                <input type="text" class="add-animal-container-panel-body-form-text-input" id="name" name="name" />
+                <b><small>Maximum 8 characters</small></b>
+              </div>
+              <div class="add-animal-container-panel-body-form-group">
+                <label class="add-animal-container-panel-body-form-group-label">Birthday</label>
+                <div class="add-animal-container-panel-body-form-input-group">
+                  <span class="add-animal-container-panel-body-form-input-group-addon"><i class="fa fa-calendar add-animal-container-panel-body-form-input-group-addon-icon"></i></span>
+                  <input type="date" name="birth_day" class="add-animal-container-panel-body-form-input-group-addon-birthday-input" id="id_birth_day" required/>
+                </div>
+              </div>
+              <div class="add-animal-container-panel-body-form-group">
+                <label class="add-animal-container-panel-body-form-group-label" for="gender">Gender</label>
+                <select class="add-animal-container-panel-body-form-input-select" name="gender" id="gender">
+                  <option selected>Male</option>
+                  <option>Female</option>
+                </select>
+              </div>
+              <div class="add-animal-container-panel-body-form-group">
+                <label class="add-animal-container-panel-body-form-group-label" for="country_animal">Country select</label>
+
+                <div>
+                  {% include 'country_list.html' %}
+                </div>
+              </div>
+              <div class="add-animal-container-panel-body-form-group">
+                <label class="add-animal-container-panel-body-form-group-label">City select</label>
+                <div>
+                  <select name="city" class="add-animal-container-panel-body-form-input-select" data-plugin-selecttwo="" id="city_form" disabled required>
+                    <option value="" selected="">---------</option>
+                  </select>
+                </div>
+              </div>
+              <div class="add-animal-container-panel-body-form-group">
+                <label class="add-animal-container-panel-body-form-group-label">Breed select</label>
+                <div>
+                  <select data-plugin-selecttwo="" class="add-animal-container-panel-body-form-input-select" name="categ" id="categ_form">
+                    <option value="">---------</option>
+
+                    <option value="A">SAVANNAH</option>
+
+                    <option value="B">BENGAL</option>
+
+                    <option value="C">SPHYNX</option>
+                    
+                    <option value="D">SCOTTISH FOLD</option>
+
+                    <option value="E"> BRITISH SHORTHAIR</option>
+
+                    <option value="F">SIAMESE</option>
+                    
+                    <option value="G">HIMALAYAN</option>
+
+                    <option value="H">RAGDOLL</option>
+
+                    <option value="I">SHANSHALA</option>
+
+                    <option value="J">PERSIAN</option>
+
+                    <option value="K">TURKISH VAN</option>    
+                    
+
+                  </select>
+                </div>
+              </div>
+              <div class="add-animal-container-panel-body-form-group">
+                <label class="add-animal-container-panel-body-form-group-label" for="priceInput">Offer price</label>
+                <div>
+                  <input type="text" class="add-animal-container-panel-body-form-text-input" id="priceInput" name="price" />
+                  <b><small class="capital">Your profits after deducting the percentage of the 8paws platform:</small></b> <strong id="my_help_text" style="">0.00 $</strong>
+                </div>
+              </div>
+
+              <div class="form-group-download" id="form-download">
+                <label class="download-label">To download the veterinary examination form</label>
+                <a class="add-animal-container-panel-body-form-download-btn" target="_blank" href="#"><i class="fa fa-download download-icon"></i> Download file</a>
+              </div>
+
+              <div></div>
+              <hr style="border-bottom: none !important;" />
+
+              <p class="you capital" style="font-size: 18px; text-align: left;">You must attach two personal photos of the cat and a copy of a health certificate that the cat is free of diseases, as a condition of accepting the advertisement</p>
+
+              <div class="drag-drop-files-box" id="dropzone-box">
+                <div>
+                  <span style="font-size: 18px !important;">Drag your cat images here to upload or click!</span>
+                </div>
+                <div class="file-cards"></div>
+                <input type="file" id="file-input" name="file-input" accept=".jpg, .jpeg, .png, .gif" multiple style="display: none;" />
+              </div>
+            </div>
+            <input type="file" id="file-input2" name="file-input2" accept=".jpg, .jpeg, .png, .gif" multiple style="display: none;" required/>
+
+            <button type="submit" id="submit-all" class="submit-btn">Submit</button>
+            <button type="reset" class="reset-btn">Reset</button>
+          </form>
+        </section>
+      </div>
+    </div>
+  </div>
+
+  <script src="{% static 'js/add_animal.js' %}"></script>
+  <script src="{% static 'js/dropzone.js' %}"></script>
+{% endblock %}

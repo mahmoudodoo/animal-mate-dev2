@@ -1,0 +1,197 @@
+/* Add background color and shadow to the container */
+body{
+    background-color: #f5f5f5;
+}
+.outcontainer{
+
+    max-width: 800px; /* Increase the width of the form container */
+    padding: 10px;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    margin: auto; /* Center the container horizontally */
+
+}
+
+.login-container {
+    max-width: 600px; /* Increase the width of the form container */
+    padding: 20px;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    margin: auto; /* Center the container horizontally */
+}
+
+/* Form Styles */
+.form-fields {
+    margin-bottom: 20px;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+/* Apply styles only to text, password, email, and mobile input fields */
+input[type="text"],
+input[type="password"],
+input[type="email"],
+input[type="tel"] {
+    box-shadow: inset #abacaf 0 0 0 2px;
+    border: 0;
+    background: rgba(0, 0, 0, 0);
+    appearance: none;
+    width: 100%;
+    position: relative;
+    border-radius: 3px;
+    padding: 1px 4px;
+    line-height: 1.4;
+    color: rgb(0, 0, 0);
+    font-size: 16px;
+    font-weight: 400;
+    height: 40px;
+    transition: all .2s ease;
+}
+
+/* Hover styles for text, password, email, and mobile input fields */
+input[type="text"]:hover,
+input[type="password"]:hover,
+input[type="email"]:hover,
+input[type="tel"]:hover {
+    box-shadow: 0 0 0 0 #fff inset, #1de9b6 0 0 0 2px;
+}
+
+/* Focus styles for text, password, email, and mobile input fields */
+input[type="text"]:focus,
+input[type="password"]:focus,
+input[type="email"]:focus,
+input[type="tel"]:focus {
+    background: #fff;
+    outline: 0;
+    box-shadow: 0 0 0 0 #fff inset, #1de9b6 0 0 0 3px;
+}
+
+/* Error Messages (hidden by default) */
+.error-message {
+    display: none;
+    color: red;
+    margin-top: 5px;
+}
+
+/* Show error message on hover */
+.form-group:hover .error-message {
+    display: block;
+}
+
+/* Show error message if there are errors */
+.form-group .error-message {
+    display: block;
+}
+
+/* Style the Accept checkbox and label */
+.form-group.accept {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.country-label {
+    display: inline-block; /* Show label for country field */
+    margin-right: 5px;
+}
+
+.form-group.accept input[type="checkbox"] {
+    margin-right: 5px;
+}
+
+.sub-btn{
+    display: inline-block;
+    outline: none;
+    cursor: pointer;
+    font-weight: 600;
+    border-radius: 3px;
+    padding: 12px 24px;
+    border: 0;
+    color: #fafafe;
+    background: #08bcaa;
+    line-height: 1.15;
+    font-size: 16px;
+    width: 100%;
+
+}
+
+.sub-btn:hover {
+    transition: all .1s ease;
+    box-shadow: 0 0 0 0 #fff, 0 0 0 3px #1de9b6;
+    background-color: #FFA900;
+}
+
+.top-navigation {
+    margin-left: 20%;
+    font-family: 'Poppins', sans-serif;
+    font-size: 12px;
+    font-weight: 500;
+    line-height: 12px;
+    color: rgb(85, 85, 85);
+}
+
+.top-navigation a {
+    color: #9d8d9d;
+    text-decoration: none; /* This removes the underline */
+}
+
+
+.top-navigation a:hover{
+    color: #08bcaa;
+}
+
+.sign-in-text {
+    font-family: 'Poppins', sans-serif;
+    font-size: 24px;
+    font-weight: 500;
+    line-height: 28.8px;
+    color: rgb(17, 17, 17);
+}
+
+
+.hyperlink-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.hyperlink-label {
+    font-family: 'Poppins', sans-serif;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 21px;
+    color: rgb(8, 188, 170);
+    text-decoration: none; /* Remove the underline for links */
+}
+
+.divider {
+    margin: 0 5px; /* Add spacing between links and divider */
+}
+
+.hyperlink-label:hover {
+    text-decoration: none; /* Remove the underline on hover for links */
+    color: rgb(8, 188, 170); /* Change the color on hover if needed */
+}
+
+.hyperlink-label2 {
+    font-family: 'Poppins', sans-serif;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 21px;
+    color: rgb(85, 85, 85); /* Updated color for Lost Password? */
+    text-decoration: none; /* Remove the underline for links */
+}
+
+.hyperlink-label2:hover {
+    text-decoration: none; /* Remove the underline on hover for links */
+    color: rgb(8, 188, 170); /* Hover color for Lost Password? */
+}

@@ -1,0 +1,79 @@
+/* CSS */
+.main-container {
+    margin-left: 305px;
+    width: 1555px;
+    max-width: 100%;
+    height: 900px;
+    display: flex;
+    flex-direction: column; /* Change to column */
+}
+
+.link-title {
+    font-family: 'Cairo', sans-serif;
+    font-size: 24px;
+    font-weight: 500;
+    line-height: 26.4px;
+    color: rgb(119, 119, 119);
+}
+
+/* Add margin-top and margin-bottom classes */
+.margin-top-20 {
+    margin-top: 20px;
+}
+
+.margin-bottom-20 {
+    margin-bottom: 20px;
+}
+
+.copy-panel {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: white;
+    border: 1px solid #767676;
+    width: 1520px;
+    height: 62px;
+    padding: 0 20px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+#copy-button {
+    background-color: #767676;
+    color: white;
+    border: none;
+    padding: 8px 16px;
+    cursor: pointer;
+    font-size: 16px;
+    margin-right: 0;
+}
+
+.copy-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin-right: 40%;
+}
+
+
+.url-text {
+    color: #767676;
+    font-size: 16px;
+    text-align: center;
+    
+}
+
+.share-btn{
+    width: 210px;
+    height: 40px;
+    background-color: #24b9a7;
+    border: solid 1px;
+    border-radius: 5%;
+    color: azure;
+    margin-left: 45%;
+    cursor: pointer;
+}
+.share-btn i {
+    color: azure;
+}

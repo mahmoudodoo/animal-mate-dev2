@@ -1,0 +1,41 @@
+{% extends 'base.html' %}
+{% load static %}
+{% load i18n %}
+{% block content %}
+<link rel="stylesheet" href="{% static 'css/edit_location.css' %}">
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" />
+<script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
+
+{% include 'profile_sidenav.html' %}
+
+<div class="main-container">
+    <div class="edit-location-container">
+        <div class="edit-location-container-col">
+          <div class="edit-location-container-col-header">
+            
+              <span class="edit-location-container-col-header-span" >Please enable access to your site, if you have blocked it!</span>
+              <button class="edit-location-container-col-header-btn" id="active-location">active my location</button>
+            
+          </div>
+          <section class="edit-location-container-col-section">
+            <header class="edit-location-container-col-section-header">
+              <h2 class="edit-location-container-col-section-header-title">
+                choose location from the map below
+              </h2>
+            </header>
+            <div class="edit-location-container-col-section-map-container">
+                <div id="map" class="edit-location-container-col-section-map-container-map" data-location="{{request.user.location}}"></div>
+                <form method="post" id="post_form" siq_id="autopick_1315">
+                    {% csrf_token %}
+                    <input type="hidden" id="location" name="location" value="">
+                    <input id="save" class="edit-location-container-col-section-map-container-btn" type="button" value="Save" onclick="saveLocation()">
+                </form>
+            </div>
+          </section>
+        </div>
+      </div>
+</div>
+
+<script src="{% static 'js/edit_location.js' %}"></script>
+
+{% endblock %}

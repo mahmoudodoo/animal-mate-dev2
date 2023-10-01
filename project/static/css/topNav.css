@@ -1,0 +1,271 @@
+/* topnav.css */
+/* General Styles */
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+}
+
+.topnav {
+  background-color: #fff;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  display: flex;
+  justify-content: center;
+  /* Center-align the items horizontally */
+  position: fixed;
+  /* Fixed positioning */
+  top: 0;
+  /* Stick to the top of the viewport */
+  width: 100%;
+  /* Full width */
+  z-index: 1000;
+  /* Ensure the navbar appears above other content */
+  height: 68px;
+}
+
+/* Style the links inside the navigation bar */
+
+.topnav a {
+  font-family: 'Poppins', sans-serif;
+  font-size: 14px;
+  font-weight: 600;
+  /* Try using 600 for semi-bold if 700 isn't working */
+  line-height: 21px;
+  color: rgb(68, 68, 68);
+  padding: 14px 16px;
+  text-decoration: none;
+  text-align: center;
+  margin-top: 7px;
+
+}
+
+
+/* Change the color of links on hover */
+.topnav a:hover {
+  color: #0bb9a7;
+  /* Hover text color */
+}
+
+/* Logo Style */
+.topnav .logo {
+  display: flex;
+  align-items: center;
+  color: #0bb9a7;
+  /* Logo text color */
+  font-weight: bold;
+  /* Logo text weight */
+  text-decoration: none;
+  background-image: url('logo.png');
+  /* Path to your logo image */
+  background-repeat: no-repeat;
+  background-size: contain;
+  /* Adjust logo size as needed */
+  background-position: center left;
+  max-width: 150px;
+  /* Adjust the maximum width to your preference */
+  height: 46.77px;
+  max-height: 46.77px;
+  padding-left: 10px;
+  /* Adjust the padding for spacing between logo and text */
+  margin-right: 5%;
+  margin-top: 7px;
+}
+
+/* Spacer for aligning logo and menu items */
+.topnav .spacer {
+  flex-grow: 1;
+}
+
+/* Login and Logout Button Styles */
+.topnav .login-button,
+.topnav .logout-button {
+  color: #0bb9a7;
+  padding: 14px 16px;
+  text-align: center;
+  text-decoration: none;
+  font-size: 17px;
+  cursor: pointer;
+}
+
+.topnav .login-button:hover,
+.topnav .logout-button:hover {
+  color: #0bb9a7;
+  /* Hover text color */
+}
+
+
+.user-icon {
+  width: 26px;
+  max-width: 26px;
+  height: 26px;
+  max-height: 26px;
+
+}
+
+.user-icon:hover {
+  color: #0bb9a7;
+}
+
+
+/* Add this to your CSS */
+.user-dropdown {
+  font-family: 'Poppins', sans-serif;
+  font-size: 14px;
+  font-weight: 600;
+  /* Try using 600 for semi-bold if 700 isn't working */
+  line-height: 21px;
+  color: rgb(68, 68, 68);
+  padding: 14px 16px;
+  text-decoration: none;
+  text-align: center;
+  margin-top: 7px;
+}
+
+.user-dropdown .dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #fff;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+}
+
+.user-dropdown:hover .dropdown-content {
+  display: block;
+}
+
+.user-dropdown .dropdown-content a {
+  color: black;
+  text-decoration: none;
+  display: block;
+  border: none;
+  min-width: 0;
+  padding: 15px;
+  width: 260px;
+  top: 100%;
+  font-family: 'Poppins', sans-serif;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 19.6px;
+}
+
+
+
+.signin-signup-btn {
+  display: inline-block;
+  outline: none;
+  cursor: pointer;
+  border-radius: 10px;
+  padding: 12px 24px;
+  border: 0;
+  color: #000000;
+  background: #FFA900;
+  line-height: 1.15;
+  font-size: 16px;
+  width: 100%;
+  margin: 10px;
+}
+
+.user-dropdown .dropdown-content a:hover {
+  color: #f2f2f2;
+
+}
+
+.text-dropdown-item {
+  font-weight: 400;
+  font-family: 'Poppins', sans-serif;
+  list-style: none;
+  font-size: 0.875rem;
+  color: #08bcaa !important;
+  background-color: white;
+  line-height: inherit;
+  width: 100%;
+  margin-bottom: 6px;
+  margin-left: 3%;
+}
+
+.text-dropdown-item:hover {
+  background-color: #f5f5f5;
+  border-left: 3px solid #08bcaa !important;
+}
+
+
+.topnav-profile-image {
+  width: 30px;
+  max-width: 30px;
+  height: 30px;
+  max-height: 30px;
+  border-radius: 50%;
+}
+
+.language-btn {
+  width: 21px;
+  height: 23px;
+  max-width: 21px !important;
+  max-height: 23px !important;
+  border-radius: 50%;
+  background-color: black;
+  color: white;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  cursor: pointer;
+}
+
+
+/* Style for the dropdown container */
+.cat-dropdown {
+  font-family: 'Poppins', sans-serif;
+  font-size: 14px;
+  font-weight: 600;
+  /* Try using 600 for semi-bold if 700 isn't working */
+  line-height: 21px;
+  color: rgb(68, 68, 68);
+  padding: 14px 16px;
+  text-decoration: none;
+  text-align: center;
+  margin-top: 7px;
+}
+
+/* Style for the dropdown content */
+.cat-dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+  z-index: 1;
+}
+
+/* Style for the dropdown links */
+.cat-dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+/* Change color on hover */
+.cat-dropdown-content a:hover {
+  background-color: #f1f1f1;
+}
+
+/* Responsive Styles (for smaller screens) */
+@media screen and (max-width: 600px) {
+
+  .topnav a,
+  .topnav .login-button,
+  .topnav .logout-button {
+    float: none;
+    display: block;
+    text-align: left;
+    width: 100%;
+  }
+
+  /* Hide login/logout buttons on small screens */
+  .topnav .login-button,
+  .topnav .logout-button {
+    display: none;
+  }
+}

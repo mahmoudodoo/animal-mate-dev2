@@ -1,0 +1,169 @@
+body {
+  font-family: "Lato", sans-serif;
+}
+
+.sidenav {
+  height: 100%;
+  width: 300px;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: #21262d;
+  overflow-x: hidden;
+  padding-top: 20px;
+  margin-top: 70px;
+  overflow: scroll;
+  scrollbar-width: thin;
+  scrollbar-color: white transparent;
+
+}
+
+
+.sidenav::-webkit-scrollbar {
+  width: 8px;
+}
+
+.sidenav::-webkit-scrollbar-thumb {
+  background-color: rgb(248, 244, 244);
+  border-radius: 4px;
+}
+
+
+.dashboard-tape p a,
+.sidenav a {
+  padding: 10px 12px 10px 20px;
+  text-decoration: none;
+  ;
+  display: block;
+  font-family: 'Cairo', sans-serif;
+  font-size: 13px;
+  font-weight: 400;
+  line-height: 22px;
+  color: rgb(255, 255, 255);
+}
+
+.add_cat_btn {
+  background-color: #24b9a7;
+  padding: 10px 12px 10px 20px;
+  text-decoration: none;
+  border: #f1f1f1 3px solid;
+  border-radius: 30%;
+  margin: 13px;
+  display: block;
+  font-family: 'Cairo', sans-serif;
+  font-size: 13px;
+  font-weight: 400;
+  line-height: 22px;
+  text-align: center;
+}
+
+.sidenav a i {
+  padding-right: 5px;
+
+  font-size: 1.3rem;
+}
+
+.sidenav a:hover {
+  color: #f1f1f1;
+}
+
+.main {
+  margin-left: 160px;
+  /* Same as the width of the sidenav */
+  font-size: 28px;
+  /* Increased text to enable scrolling */
+  padding: 0px 10px;
+}
+
+.sidenav a.active {
+  border-left: 3px solid #f1f7f7;
+  /* Adjust the border color and width as needed */
+}
+
+
+
+
+.dashboard-tape {
+  width: 1605px;
+  height: 50px;
+  background-color: #171717;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  color: rgb(250, 248, 248);
+  font-size: 14px;
+  font-weight: 300;
+  line-height: 20px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  font-family: "Cairo", sans-serif;
+  margin-top: 70px;
+  margin-left: 305px;
+  z-index: 2;
+}
+
+.dashboard-tape p {
+  margin: 0;
+  padding: 10px 20px;
+  /* Add padding to space out the <p> elements */
+}
+
+
+
+
+@media screen and (max-height: 450px) {
+  .sidenav {
+    padding-top: 15px;
+  }
+
+  .sidenav a {
+    font-size: 18px;
+  }
+}
+
+
+.add-cat-btn {
+  font-family: 'Cairo', sans-serif;
+  line-height: 22px;
+  list-style: none;
+  box-sizing: border-box;
+  text-decoration: none;
+  position: relative;
+  display: block;
+  outline: none !important;
+  padding: 12px 25px;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  color: #ffffff !important;
+  background: #0bb9a7;
+  text-align: center;
+  border: 2px solid;
+  margin-top: 11px;
+  margin: 10px;
+  border-radius: 50px 50px;
+  font-size: 16px;
+}
+
+.sidebar-header {
+  font-family: 'Cairo', sans-serif;
+  line-height: 22px;
+  font-size: 15px;
+  box-sizing: border-box;
+  position: relative;
+  color: #777777;
+  height: 50px;
+  margin-left: 20px;
+  background-color: #1d2127;
+}
+
+.sidebar-title{
+  font-family: 'Cairo', sans-serif;
+  line-height: 22px;
+  cursor: auto;
+  box-sizing: border-box;
+  color: #465162;
+  padding: 15px;
+  font-size: 1.5rem;
+}

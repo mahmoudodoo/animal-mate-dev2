@@ -1,0 +1,85 @@
+{% load static %}
+<div class="topnav">
+  <img class="logo" src="{% static 'imgs/logo.png' %}" alt="" />
+  <a href="{% url 'home' %}">HOME</a>
+  <a href="#about">CATS LIST</a>
+  <a href="#">
+    <div class="cat-dropdown">
+      CAT BREEDS <i class="fa fa-sort-desc" aria-hidden="true"></i>
+      <div class="cat-dropdown-content">
+          <!-- Dropdown items -->
+          <a href="#" value="A">SAVANNAH</a>
+
+          <a href="#" value="B">BENGAL</a>
+
+          <a href="#" value="C">SPHYNX</a>
+          
+          <a href="#" value="D">SCOTTISH FOLD</a>
+
+          <a href="#" value="E"> BRITISH SHORTHAIR</a>
+
+          <a href="#" value="F">SIAMESE</a>
+          
+          <a href="#" value="G">HIMALAYAN</a>
+
+          <a href="#" value="H">RAGDOLL</a>
+
+          <a href="#" value="I">SHANSHALA</a>
+
+          <a href="#" value="J">PERSIAN</a>
+
+          <a href="#" value="K">TURKISH VAN</a>    
+      </div>
+  </div>
+  </a>
+
+  <a href="#about">ABOUT US</a>
+  <a href="#about">CONTACT US</a>
+  {% if request.user.is_authenticated %}
+    <a href="{% url 'add_animal' %}"><i class="fa fa-plus-circle" aria-hidden="true"></i> NEW CAT</a>
+    <a><i class="fa fa-bell" aria-hidden="true"></i></a>
+    <a><i class="fa fa-search" aria-hidden="true"></i></a>
+  {% endif %}
+
+  <a><button class="language-btn">AR</button></a>
+
+  {% if request.user.is_authenticated %}
+    <div class="user-dropdown">
+      <img src="{{ request.user.profile_image.url }}" alt="" class="topnav-profile-image" />
+      <div class="dropdown-content">
+        <a href="#" class="signin-signup-btn">Hello {{ user.username }}</a>
+        <a href="{% url 'profile_home' %}" class="text-dropdown-item">
+          <i class="fa fa-user"></i>
+          My Profile
+        </a>
+        <a href="#" class="text-dropdown-item">
+          <i class="fa fa-question-circle-o"></i>
+          Help and Faq
+        </a>
+        <a href="{% url 'logout' %}" class="text-dropdown-item">
+          <i class="fa fa-sign-out"></i>
+          Logout
+        </a>
+      </div>
+    </div>
+  {% else %}
+    <div class="user-dropdown">
+      <i class="fa fa-user-circle user-icon"></i>
+      <div class="dropdown-content">
+        <a href="{% url 'login' %}" class="signin-signup-btn">Sign In or Sign Up</a>
+        <a href="#" class="text-dropdown-item">
+          <i class="fa fa-question-circle-o"></i>
+          Help and Faq
+        </a>
+      </div>
+    </div>
+  {% endif %}
+  {% if 'account' not in request.path and 'animal' not in request.path and 'chat' not in request.path %}
+    <div class="social-icons">
+      <a href="#"><i class="fab fa-tiktok social-icon"></i></a>
+      <a href="#"><i class="fab fa-instagram social-icon"></i></a>
+      <a href="#"><i class="fab fa-youtube social-icon"></i></a>
+      <a href="#"><i class="fab fa-facebook social-icon"></i></a>
+    </div>
+  {% endif %}
+</div>

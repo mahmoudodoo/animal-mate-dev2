@@ -1,0 +1,51 @@
+{% extends 'base.html' %}
+{% load static %}
+{% load i18n %}
+<!-- SPECIFIC CSS -->
+{% block content %}
+  <link rel="stylesheet" href="{% static 'css/chat_room.css' %}" />
+  {% include 'profile_sidenav.html' %}
+  
+  <div id="chat-container-box">
+    <div class="main-container">
+      <div class="chat-window">
+        <div class="chat-messages" id="chat-messages">
+          <!-- message body -->
+
+          {% for m in chat_messages %}
+          
+            <div id="chat-message" class="chat-message" data-username="{{ m.author.username }}">
+              <div class="profile-image">
+
+                <img src="{{ m.author.profile_image.url }}" alt="" class="profile-image" />
+              </div>
+              <div class="message-content">
+                <div class="message-header">
+                  <span class="username"><b>{{ m.author.username }}</b></span>
+                  <span class="timestamp">{{ m.timestamp }}</span>
+                </div>
+                <div class="message-body">
+                    {{ m.content }}
+                </div>
+              </div>
+            </div>
+          {% endfor %}
+
+          <!-- More messages go here -->
+        </div>
+
+        <!-- Update the form action and method -->
+
+        <div class="chat-text">
+          <textarea id="chat-message-input" placeholder="Type your message..."></textarea>
+          <button id="chat-message-submit" class="send-button"><i class="fas fa-paper-plane"></i></button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  {{ room.slug|json_script:'json-roomname' }}
+  {{ request.user.username|json_script:'json-username' }}
+
+  <script src="{% static 'js/chat_room.js' %}"></script>
+{% endblock %}

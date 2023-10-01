@@ -1,0 +1,171 @@
+.main-container {
+    margin-left: 305px;
+    width: 1555px;
+    max-width: 100%;
+    height: 900px;
+    display: flex;
+    flex-direction: row;
+  }
+  
+  .cards-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  
+  .card {
+    color: #777;
+    font-family: 'Cairo', sans-serif;
+    line-height: 22px;
+    font-size: 13px;
+    box-sizing: border-box;
+    display: inline-block;
+    border-radius: 4px;
+    background: transparent;
+    box-shadow: none;
+    border: none;
+    width: 224px;
+    margin: 10px;
+    height: 368px;
+    max-height: 368px;
+  }
+  
+  .card-header {
+    color: #777;
+    font-family: 'Cairo', sans-serif;
+    line-height: 22px;
+    font-size: 13px;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: space-between;
+    background: #f6f6f6;
+    border-radius: 5px 5px 0 0;
+    border-bottom: 1px solid #dadada;
+    padding: 18px;
+    position: relative;
+  }
+  
+  .card-body {
+    color: #777;
+    font-family: 'Cairo', sans-serif;
+    line-height: 22px;
+    font-size: 13px;
+    box-sizing: border-box;
+    padding: 15px;
+    background: #fdfdfd;
+    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.05);
+    border-radius: 0 0 5px 5px;
+    margin-bottom: 30px;
+    height: 308px;
+    max-height: 308px;
+  }
+  
+  .card-image {
+    width: 194px;
+    height: 240px;
+  }
+  
+  
+  
+  
+  .card-tail {
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+  }
+  
+  .card-tail-dot {
+    width: 10px;
+    height: 10px;
+    background-color: #777;
+    border-radius: 50%;
+    margin: 0 5px;
+    cursor: pointer;
+  }
+  
+  /* Slideshow container */
+  .slideshow-container {
+    width: 194px; /* Set the width to match the image width */
+    height: 240px; /* Set the height to match the image height */
+    overflow: hidden; /* Hide overflow to make sure the images don't go beyond the container */
+  }
+  
+  /* Next & previous buttons */
+  .prev, .next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    padding: 16px;
+    margin-top: -22px;
+    color: white;
+    font-weight: bold;
+    font-size: 18px;
+    transition: 0.6s ease;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+  }
+  
+  /* Position the "next button" to the right */
+  .next {
+    right: 0;
+    border-radius: 3px 0 0 3px;
+  }
+  
+  /* On hover, add a black background color with a little bit see-through */
+  .prev:hover, .next:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+  }
+  
+  /* Caption text */
+  .text {
+    color: #f2f2f2;
+    font-size: 15px;
+    padding: 8px 12px;
+    position: absolute;
+    bottom: 8px;
+    width: 100%;
+    text-align: center;
+  }
+  
+  /* Number text (1/3 etc) */
+  .numbertext {
+    color: #f2f2f2;
+    font-size: 12px;
+    padding: 8px 12px;
+    position: absolute;
+    top: 0;
+  }
+  
+  /* The dots/bullets/indicators */
+  .dot {
+    cursor: pointer;
+    height: 15px;
+    width: 15px;
+    margin: 0 2px;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.6s ease;
+  }
+  
+  .active, .dot:hover {
+    background-color: #717171;
+  }
+  
+  /* Fading animation */
+  .fade {
+    animation-name: fade;
+    animation-duration: 1.5s;
+  }
+  
+  @keyframes fade {
+    from {opacity: .4}
+    to {opacity: 1}
+  }
+  
+  /* On smaller screens, decrease text size */
+  @media only screen and (max-width: 300px) {
+    .prev, .next,.text {font-size: 11px}
+  }
+  
